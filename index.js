@@ -1,3 +1,8 @@
+/**
+ * 罗马数字转换成数字
+ * @param s
+ * @returns {number}
+ */
 function transNumber(s){
     let obj = {
         'I':1,
@@ -14,6 +19,16 @@ function transNumber(s){
     }
     return num
 }
+
+/**
+ * 正则验证是否是罗马数字
+ * @param s
+ * @returns {boolean}
+ */
+function checkRoman(s){
+    return /^(-| +|^)M{0,9}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})( +|$)/.test(s);
+}
 export {
-    transNumber
+    transNumber,
+    checkRoman
 }
